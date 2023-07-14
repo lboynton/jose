@@ -2981,7 +2981,7 @@ ${newlined}
       redirect: "manual",
       headers: options.headers,
       cf: {
-        cacheTtl: 60,
+        cacheTtl: 6e3,
         cacheEverything: true
       }
     }).catch((err) => {

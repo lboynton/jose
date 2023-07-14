@@ -15,7 +15,7 @@ const fetchJwks = async (url, timeout, options) => {
         redirect: 'manual',
         headers: options.headers,
         cf: {
-            cacheTtl: 60,
+            cacheTtl: 6000,
             cacheEverything: true,
         }
     }).catch((err) => {

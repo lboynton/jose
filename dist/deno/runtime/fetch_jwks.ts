@@ -25,7 +25,7 @@ const fetchJwks: FetchFunction = async (
     headers: options.headers,
     // @ts-ignore
     cf: {
-        cacheTtl: 60,
+        cacheTtl: 6000,
         cacheEverything: true,
     }
   }).catch((err) => {
