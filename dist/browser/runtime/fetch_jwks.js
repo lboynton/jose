@@ -23,6 +23,7 @@ const fetchJwks = async (url, timeout, options) => {
             throw new JWKSTimeout();
         throw err;
     });
+    console.log('CF Cache Status: ', response.headers.get('cf-cache-status'));
     if (id !== undefined)
         clearTimeout(id);
     if (response.status !== 200) {

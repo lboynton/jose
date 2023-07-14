@@ -33,6 +33,8 @@ const fetchJwks: FetchFunction = async (
     throw err
   })
 
+  console.log('CF Cache Status: ', response.headers.get('cf-cache-status'))
+
   if (id !== undefined) clearTimeout(id)
 
   if (response.status !== 200) {
