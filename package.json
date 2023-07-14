@@ -115,7 +115,6 @@
     "clear": "rm -Rf dist",
     "sedcleanup": "find . -name '*.bak' -type f -print0 | xargs -0 rm -f",
     "docs:generate": "typedoc",
-    "prepare": "run-s clear build:*",
     "runtime-browser": "run-s runtime:clear runtime:browser:* runtime:refs",
     "runtime-deno": "npm run-script runtime-browser && mkdir -p dist/deno && cp -R src/. dist/deno && rm -R dist/deno/runtime/browser dist/deno/runtime/node",
     "runtime-node": "run-s runtime:clear runtime:node:* runtime:refs",
