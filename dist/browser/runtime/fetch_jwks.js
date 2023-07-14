@@ -14,6 +14,10 @@ const fetchJwks = async (url, timeout, options) => {
         signal: controller ? controller.signal : undefined,
         redirect: 'manual',
         headers: options.headers,
+        cf: {
+            cacheTtl: 60,
+            cacheEverything: true,
+        }
     }).catch((err) => {
         if (timedOut)
             throw new JWKSTimeout();

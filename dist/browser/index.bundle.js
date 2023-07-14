@@ -2974,7 +2974,11 @@ var fetchJwks = async (url, timeout, options) => {
   const response = await fetch(url.href, {
     signal: controller ? controller.signal : void 0,
     redirect: "manual",
-    headers: options.headers
+    headers: options.headers,
+    cf: {
+      cacheTtl: 60,
+      cacheEverything: true
+    }
   }).catch((err) => {
     if (timedOut)
       throw new JWKSTimeout();
